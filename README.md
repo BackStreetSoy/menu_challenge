@@ -5,24 +5,24 @@ The goal of this challenge is to create a program to read a menu from a given da
 
 pseudo code:
 
-**1)** Using nokogiri parse a given url and isolate the data. 
+  **1)** Using nokogiri parse a given url and isolate the data. 
 
-**2)** format data file into hash with items as keys and prices as values. 
+  **2)** format data file into hash with items as keys and prices as values. 
 
-**3)** Collect the values of the hash.
+  **3)** Collect the values of the hash.
 
-**4)** Find the totals of every possible combination of those values.
+  **4)** Find the totals of every possible combination of those values.
 
-**5)** Determine if any of those totals equals the target price.
+  **5)** Determine if any of those totals equals the target price.
 
 This ruby based program runs entirely on the command line. Open up the terminal and when prompted insert the url in which the menu is posted. This program is written to work for any menu formatted similarly to the one given for the challenge. 
 
-**1)** open terminal. 
+   **1)** open terminal. 
 
-**2)** in the command line type:
+  **2)** in the command line type:
 
-```
-ruby menu_exercise.rb
-```
+  
+    ruby menu_exercise.rb
 
-**3)** follow  prompts.
+
+  **3)** follow  prompts.
