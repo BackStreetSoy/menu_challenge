@@ -7,7 +7,7 @@ This ruby based program runs entirely on the command line. Open up the terminal 
 **2)** in the command line type:
 
 ```
-ruby menu_exercise.b
+ruby menu_exercise.rb
 ```
 
 **3)** follow the prompts.
