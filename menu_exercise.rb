@@ -77,26 +77,43 @@ def print_all(url)
 end 
 
 def run 
-    puts "Hello, please enter the url of your menu..."
+    puts "please enter the url of your menu..."
     menu_url = gets.chomp
     puts "loading"
     sleep(1)
-    if !check_combinations(menu_url)
-        puts "Sorry no matches. Would you like to see all results (y/n)?"
-        response = gets.chomp
-
-        if response == "y"
-            print_all(menu_url)
-        else 
-            puts "try different url? (y/n)?"
+    if menu_url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/) != nil
+        if !check_combinations(menu_url)
+            puts "Sorry no matches. Would you like to see every item combination? (y/n)?"
             response = gets.chomp
+
             if response == "y"
-                run
-            else
-                sleep(1)
-                puts "Goodbye!"
+                print_all(menu_url)
+            elsif response == "n"
+                puts "try different url? (y/n)?"
+                response = gets.chomp
+                if response == "y"
+                    run
+                elsif response =="n"
+                    sleep(1)
+                    puts "Goodbye!"
+                else 
+                    puts "Sorry. That is not a recognized response."
+                end 
+            else 
+                puts "Sorry. That is not a recognized response."
             end 
         end 
+    else 
+        puts "Sorry. Invalid Url. Try Again? (y/n)?"
+        response = gets.chomp
+                if response == "y"
+                    run
+                elsif response =="n"
+                    sleep(1)
+                    puts "Goodbye!"
+                else 
+                    puts "Sorry. That is not a recognized response."
+                end 
     end 
 end 
 
